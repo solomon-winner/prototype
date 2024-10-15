@@ -1,1 +1,0 @@
-const BannerCards = ({ data }) => {};
