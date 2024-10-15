@@ -6,5 +6,5 @@ export const BannerDiv = styled.div`
     align-items: center;
     padding: 0 10%;
     height: 100vh;
-    background-color: #000000;
+    border: 1px solid black;
 `
