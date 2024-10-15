@@ -1,5 +1,5 @@
-import BannerDesc from "../../molecules/bannerDesc/bannerDesc";
-import BannerCards from "../../molecules/bannerCards/bannerCards";
+import BannerDesc from "../../molecules/bannerDesc/bannerDesc.jsx";
+import BannerCards from "../../molecules/bannerCards/bannerCards.jsx";
 import {BannerDiv} from "./banner";
 
 const Banner = () => {
