@@ -1,14 +1,13 @@
 import BannerDesc from "../../molecules/bannerDesc";
 import BannerCards from "../../molecules/bannerCards";
-import {Banner} from "./banner";
+import {BannerDiv} from "./banner";
 
 const Banner = () => {
     return (
-        <Banner>
+        <BannerDiv>
             <BannerDesc/>
             <BannerCards/>
-        </Banner>
-    );
+        </BannerDiv>    );
 }
 
 export default Banner;

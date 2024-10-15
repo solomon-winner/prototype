@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const Banner = styled.div`
+export const BannerDiv = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    padding: 0 10%;
     height: 100vh;
-    background-color: #f5f5f5;
+    background-color: #000000;
 `
