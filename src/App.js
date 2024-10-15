@@ -1,8 +1,10 @@
 import './App.css';
+import Banner from './components/organisms/banner';
 
 function App() {
   return (
     <div className="App">
+      <Banner/>
     </div>
   );
 }
