@@ -1,12 +1,13 @@
 import BannerDesc from "../../molecules/bannerDesc";
 import BannerCards from "../../molecules/bannerCards";
+import {Banner} from "./banner";
 
 const Banner = () => {
     return (
-        <div className="banner">
+        <Banner>
             <BannerDesc/>
             <BannerCards/>
-        </div>
+        </Banner>
     );
 }
 
