@@ -5,8 +5,7 @@ const BannerDesc = () => {
     return (
         <Desc>
             <ExploreCard/>
-            <Image>
-            </Image>
+            <Image/>
         </Desc>
     );
 };

@@ -4,6 +4,7 @@ export const Explore = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: end;
     gap: 1%;
     width: 400px;
     height: 55vh;

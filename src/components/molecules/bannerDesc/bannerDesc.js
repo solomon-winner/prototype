@@ -5,7 +5,7 @@ export const Desc = styled.div`
     border-bottom: 10px solid #185601;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     gap: 5%;
     width: 100%;
     height: 80vh;
@@ -16,5 +16,5 @@ export const Image = styled.div`
     height: 70vh;
     background-image: url(${CEO});
     background-size: cover;
-    background-position: center;
+    background-position: end;
 `
