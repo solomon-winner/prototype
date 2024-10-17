@@ -6,5 +6,4 @@ export const BannerDiv = styled.div`
     justify-content: space-between;
     gap: 10%;
     align-items: center;
-    border: 1px solid black;
 `
