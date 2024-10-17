@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CardWrapper = styled.div`
     width: 100%;
-    height: 150px;
+    height: fit-content;
     display: flex;
     justify-content:center;
     max-width: 100vw;
