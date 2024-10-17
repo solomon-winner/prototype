@@ -2,6 +2,7 @@ import { Explore, ExploreButton } from "./exploreCard";
 
 const ExploreCard = () => {
     return (
+        <>
         <Explore>
          <h3>Psalms 95: 1-6</h3>
 
@@ -12,6 +13,7 @@ const ExploreCard = () => {
          </p>
          <ExploreButton>Explore More</ExploreButton>
         </Explore>
+        </>
     );
 }
 

@@ -8,6 +8,7 @@ export const Explore = styled.div`
     gap: 1%;
     width: 400px;
     height: 55vh;
+    font-family: 'MyCustomFont', sans-serif;
 `
 export const ExploreButton = styled.div`
     color: #ffffff;

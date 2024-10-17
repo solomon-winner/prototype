@@ -6,7 +6,6 @@ const BannerCards = () => {
             <BannerCard/>
             <BannerCard/>
             <BannerCard/>
-            <BannerCard/>
 
         </CardWrapper>
     );

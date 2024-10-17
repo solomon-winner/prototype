@@ -3,16 +3,16 @@ import styled from "styled-components";
 export const CardWrapper = styled.div`
     width: 100%;
     height: 150px;
-    z-index: 1000;
-    position: absolute;
-    top: 75%;
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
+    max-width: 100vw;
+    box-sizing: border-box;
 `
 
 export const BannerCard = styled.div`
-    width: 300px;
+    width: 25%;
     height: 100%;
-    border: 2px solid green;
+    margin: 0 1%;
+    border: 1px solid green;
     background-color: white;
     `

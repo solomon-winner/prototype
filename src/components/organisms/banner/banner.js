@@ -4,7 +4,7 @@ export const BannerDiv = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 10%;
     align-items: center;
-    height: 100vh;
     border: 1px solid black;
 `

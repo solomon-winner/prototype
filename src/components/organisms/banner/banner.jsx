@@ -9,7 +9,8 @@ const Banner = () => {
             <Nav/>
             <BannerDesc/>
             <BannerCards/>
-        </BannerDiv>    );
+        </BannerDiv> 
+        );
 }
 
 export default Banner;
