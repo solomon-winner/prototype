@@ -14,6 +14,7 @@ function App() {
       <About/>
       <Testimony/>
       <Songs/>
+      <Contacts/>
     </div>
     </>
   );
