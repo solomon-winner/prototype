@@ -1,23 +1,43 @@
 import styled from "styled-components";
 
-export const SongDiv = styled.div`
-    width: 90%;
+export const SongWrapper = styled.div`
+    width: 100%;
     height: fit-content;
     display: flex;
-    justify-content:space-between;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 5%;
+    text-align: start;
+`;
+export const CardTitle = styled.div`
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: green;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 2%;
+    padding-bottom: 2%;
+
+`;
+export const SongDiv = styled.div`
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:start;
     align-items: center;
     gap: 30px;
     max-width: 100vw;
     box-sizing: border-box;
-    margin-top: 5%;
-    text-align: start;
+
 `
 export const SongCard = styled.div`
-    width: 50rem;
+    width: 30rem;
     height: fit-content;
     padding: 20px;
     display: flex;
-    gap: 5%
+    gap: 2%;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
 
 `
 export const SongCardLeft = styled.div`
@@ -79,6 +99,49 @@ export const SongTitle = styled.p`
     color: green;
     width: 100%;
     margin: 0;
-    padding: 6px;
+    padding: 5px;
     box-sizing: border-box;
+`
+export const PlaySong = styled.button`
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: white;
+    margin-top: 10px;
+    color: green;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid green;
+    box-sizing: border-box;
+    justify-self: end;
+    &:hover {
+        color: white;
+        background-color: darkgreen;
+    }
+`
+export const SeeMore = styled.button`
+    width: 150px;
+    height: 2rem;
+    display: flex;
+    align-self: end;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin-top: 30px;
+    margin-right: 60px;
+    color: green;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 45rem;
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    &:hover {
+        color: white;
+        background-color: darkgreen;
+    }
 `
