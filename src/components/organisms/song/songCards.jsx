@@ -1,4 +1,4 @@
-import { CardTitle, Image, PlaySong, SongButton, SongCard, SongCardLeft, SongCardRight, SongDiv, SongTitle, SongWrapper, Title, SeeMore } from "./songCards";
+import { CardTitle, Image, PlaySong, SongButton, SongCard, SongCardLeft, SongCardRight, SongDiv, SongTitle, SongWrapper, Title, SeeMore, SingleSong, SongImage, SongDetails, SongName } from "./songCards";
 import { FaSpotify, FaApple, FaAmazon, FaYoutube } from "react-icons/fa";
 
 const Songs = () => {
@@ -116,7 +116,61 @@ const Songs = () => {
                 </SongCardRight>
             </SongCard>
         </SongDiv>
+
         <SeeMore>See More Albums</SeeMore>
+        <CardTitle>Single Release</CardTitle>
+
+        <SongDiv>
+        <SingleSong>
+            <SongImage img="../../assets/CEO_no_bg.png" />
+            <SongDetails>
+                <SongName>Wletew Bezabgn</SongName>
+            </SongDetails>
+            <PlaySong><FaYoutube/>Play the song</PlaySong>
+
+        </SingleSong>
+
+        <SingleSong>
+            <SongImage img="../../assets/CEO_no_bg.png" />
+            <SongDetails>
+                <SongName>Wletew Bezabgn</SongName>
+            </SongDetails>
+            <PlaySong><FaYoutube/>Play the song</PlaySong>
+        </SingleSong>
+        <SingleSong>
+            <SongImage img="../../assets/CEO_no_bg.png" />
+            <SongDetails>
+                <SongName>Wletew Bezabgn</SongName>
+            </SongDetails>
+            <PlaySong><FaYoutube/>Play the song</PlaySong>
+        </SingleSong>
+
+        <SingleSong>
+            <SongImage img="../../assets/CEO_no_bg.png" />
+            <SongDetails>
+                <SongName>Wletew Bezabgn</SongName>
+            </SongDetails>
+            <PlaySong><FaYoutube/>Play the song</PlaySong>
+        </SingleSong>
+        <SingleSong>
+            <SongImage img="../../assets/CEO_no_bg.png" />
+            <SongDetails>
+                <SongName>Wletew Bezabgn</SongName>
+            </SongDetails>
+            <PlaySong><FaYoutube/>Play the song</PlaySong>
+        </SingleSong>
+
+        <SingleSong>
+            <SongImage img="../../assets/CEO_no_bg.png" />
+            <SongDetails>
+                <SongName>Wletew Bezabgn</SongName>
+            </SongDetails>
+            <PlaySong><FaYoutube/>Play the song</PlaySong>
+        </SingleSong>
+
+        </SongDiv>
+        <SeeMore>See More Songs</SeeMore>
+
         </SongWrapper>
     )
 }

@@ -29,7 +29,6 @@ export const SongDiv = styled.div`
     gap: 30px;
     max-width: 100vw;
     box-sizing: border-box;
-
 `
 export const SongCard = styled.div`
     width: 30rem;
@@ -104,20 +103,20 @@ export const SongTitle = styled.p`
 `
 export const PlaySong = styled.button`
     width: 100%;
+    max-width: 100%;
     height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
     background-color: white;
-    margin-top: 10px;
     color: green;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     border: 1px solid green;
     box-sizing: border-box;
-    justify-self: end;
+    margin-top: 10px;
     &:hover {
         color: white;
         background-color: darkgreen;
@@ -135,13 +134,47 @@ export const SeeMore = styled.button`
     margin-right: 60px;
     color: green;
     font-size: 1rem;
-    font-weight: bold;
     cursor: pointer;
-    border-radius: 45rem;
-    border: none;
+    border: 1px solid green;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
     &:hover {
         color: white;
         background-color: darkgreen;
     }
+`
+export const SingleSong = styled.div`
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    background-color: white;
+`
+export const SongImage = styled.div`
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    background-image: url(${props => props.img});
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+
+`
+export const SongDetails = styled.div`
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    padding-left: 20px;
+    flex-direction: column;
+    gap: 5px;
+    box-sizing: border-box;
+`
+export const SongName = styled.p`
+    color: green;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+
 `
