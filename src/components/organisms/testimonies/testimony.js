@@ -16,9 +16,8 @@ export const TestimonyDiv = styled.div`
 
 export const TestimonyCards = styled.div`
     width: 100%;
-    // height: fit-content;
+    height: fit-content;
     background-color: white;
-    height: 200px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
     padding: 20px;
 `
