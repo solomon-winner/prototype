@@ -4,6 +4,7 @@ import Banner from './components/organisms/banner/banner.jsx';
 import GlobalStyle from './style/style.js';
 import Contacts from './components/organisms/contacts/contacts.jsx';
 import Testimony from './components/organisms/testimonies/testimony.jsx';
+import Songs from './components/organisms/song/songCards.jsx';
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
       <Banner/>
       <About/>
       <Testimony/>
+      <Songs/>
     </div>
     </>
   );
