@@ -1,13 +1,14 @@
+import React from "react";
 import { NavBar, NavLinks } from "./navBar";
 
- const Nav = () => {
+ const Nav = ({ scrollToSection, homeRef, aboutRef, testimonyRef, songsRef, contactsRef }) => {
     return (
         <NavBar>
-            <NavLinks>Home</NavLinks>
-            <NavLinks>About</NavLinks>
-            <NavLinks>Testimonies</NavLinks>
-            <NavLinks>Songs</NavLinks>
-            <NavLinks>Contacts</NavLinks>
+            <NavLinks onClick={() => scrollToSection(homeRef)}>Home</NavLinks>
+            <NavLinks onClick={() => scrollToSection(aboutRef)}>About</NavLinks>
+            <NavLinks onClick={() => scrollToSection(testimonyRef)}>Testimonies</NavLinks>
+            <NavLinks onClick={() => scrollToSection(songsRef)}>Songs</NavLinks>
+            <NavLinks onClick={() => scrollToSection(contactsRef)}>Contacts</NavLinks>
 
         </NavBar>
     )
