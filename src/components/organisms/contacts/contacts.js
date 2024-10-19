@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ContactDiv = styled.div`
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin-top: 5%;
     padding: 0;
     height: 100vh;
     width: 100%;
@@ -91,3 +91,8 @@ export const Button = styled.button`
         background-color: #45a049;
     }
 `;
+export const P = styled.p`
+    font-size: 1rem;
+    color: green;
+    font-style: italic;
+`

@@ -21,7 +21,7 @@ const Footer = () => {
         <FooterWave />
         <FooterContent>
           <FooterSection>
-            <FooterTitle>About Us</FooterTitle>
+            <FooterTitle>About </FooterTitle>
             <FooterText>We are passionate about creating astonishing UI experiences that captivate and inspire.</FooterText>
           </FooterSection>
           <FooterSection>
