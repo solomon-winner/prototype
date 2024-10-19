@@ -42,7 +42,7 @@ export const FormSide = styled.div`
     padding: 2rem;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h3`
     color: green;
     margin-bottom: 1.5rem;
 `;

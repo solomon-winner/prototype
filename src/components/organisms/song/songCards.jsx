@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import { CardTitle, Image, PlaySong, SongButton, SongCard, SongCardLeft, SongCardRight, SongDiv, SongTitle, SongWrapper, Title, SeeMore, SingleSong, SongImage, SongDetails, SongName } from "./songCards";
 import { FaSpotify, FaApple, FaAmazon, FaYoutube } from "react-icons/fa";
+import { scrollContext } from "../../../utils/scrollContext";
 
 const Songs = () => {
+    const { songsRef } = useContext(scrollContext);
+
     return (
-        <SongWrapper>
+        <SongWrapper ref = {songsRef}>
             <CardTitle>Albums</CardTitle>
         <SongDiv>
             <SongCard>

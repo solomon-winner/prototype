@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import { TestifierName, Testimonial, TestimonyCards, TestimonyDiv, Title } from "./testimony";
+import { scrollContext } from "../../../utils/scrollContext";
 
 const Testimony = () => {
+    const { testimonyRef } = useContext(scrollContext);
+
     return (
-        <TestimonyDiv>
+        <TestimonyDiv ref={testimonyRef}>
             <Title>Testimonies</Title>
             <TestimonyCards>
                 <TestifierName>

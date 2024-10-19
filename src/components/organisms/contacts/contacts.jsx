@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { ContactDiv, Container, PhotoSide, FormSide, Title, Form, Label, Input, Textarea, Button, P } from './contacts';
+import { scrollContext } from '../../../utils/scrollContext';
 
 const Contacts = () => {
+    const { contactsRef } = useContext(scrollContext);
     return (
-        <ContactDiv>
+        <ContactDiv ref={contactsRef}>
             <Container>
                 <PhotoSide role="img" aria-label="Inspirational image of a person writing in a journal near a window"></PhotoSide>
                 <FormSide>

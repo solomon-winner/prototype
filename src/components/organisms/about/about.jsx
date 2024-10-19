@@ -1,8 +1,11 @@
+import { useContext } from "react";
+import { scrollContext } from "../../../utils/scrollContext";
 import { AboutDiv, AboutImage, AboutText } from "./about";
 
 const About = () => {
+    const { aboutRef } = useContext(scrollContext);
     return (
-        <AboutDiv>
+        <AboutDiv ref={aboutRef}>
             <AboutImage></AboutImage>
             <AboutText>
                 <h3>About </h3>
