@@ -22,11 +22,28 @@ function App() {
     <>
     <GlobalStyle/>
     <div className="App">
-      <Banner/>
+      <sction ref={homeRef}>
+    <Banner
+          scrollToSection={scrollToSection}
+          homeRef={homeRef}
+          aboutRef={aboutRef}
+          testimonyRef={testimonyRef}
+          songsRef={songsRef}
+          contactsRef={contactsRef}
+        />
+        </sction>
+        <section ref={aboutRef}>
       <About/>
+        </section>
+        <section ref = {testimonyRef}>
       <Testimony/>
+        </section>
+      <section ref={songsRef}>
       <Songs/>
+      </section>
+      <section ref={contactsRef}>
       <Contacts/>
+      </section>
       <Footer/>
     </div>
     </>
