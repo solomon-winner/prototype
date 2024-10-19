@@ -21,3 +21,4 @@ const ScrollProvider = ({children}) => {
         </scrollContext.Provider>
     )
 }
+export {scrollContext, ScrollProvider};

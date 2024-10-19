@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavBar, NavLinks } from "./navBar";
+import { scrollContext } from "../../../utils/scrollContext";
 
- const Nav = ({ scrollToSection, homeRef, aboutRef, testimonyRef, songsRef, contactsRef }) => {
+ const Nav = () => {
+    const { scrollToSection, homeRef, aboutRef, testimonyRef, songsRef, contactsRef } = useContext(scrollContext);
     return (
         <NavBar>
             <NavLinks onClick={() => scrollToSection(homeRef)}>Home</NavLinks>

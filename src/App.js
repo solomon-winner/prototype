@@ -7,6 +7,7 @@ import Contacts from './components/organisms/contacts/contacts.jsx';
 import Testimony from './components/organisms/testimonies/testimony.jsx';
 import Songs from './components/organisms/song/songCards.jsx';
 import Footer from './components/organisms/footer/footer.jsx';
+import { ScrollProvider } from './utils/scrollContext.js';
 
 function App() {
   const homeRef = useRef(null);
@@ -21,31 +22,16 @@ function App() {
   return (
     <>
     <GlobalStyle/>
+    <ScrollProvider>
     <div className="App">
-      <sction ref={homeRef}>
-    <Banner
-          scrollToSection={scrollToSection}
-          homeRef={homeRef}
-          aboutRef={aboutRef}
-          testimonyRef={testimonyRef}
-          songsRef={songsRef}
-          contactsRef={contactsRef}
-        />
-        </sction>
-        <section ref={aboutRef}>
+      <Banner/>
       <About/>
-        </section>
-        <section ref = {testimonyRef}>
       <Testimony/>
-        </section>
-      <section ref={songsRef}>
       <Songs/>
-      </section>
-      <section ref={contactsRef}>
       <Contacts/>
-      </section>
       <Footer/>
     </div>
+    </ScrollProvider>
     </>
   );
 }
