@@ -5,6 +5,8 @@ import GlobalStyle from './style/style.js';
 import Contacts from './components/organisms/contacts/contacts.jsx';
 import Testimony from './components/organisms/testimonies/testimony.jsx';
 import Songs from './components/organisms/song/songCards.jsx';
+import Footer from './components/organisms/footer/footer.jsx';
+
 function App() {
   return (
     <>
@@ -15,6 +17,7 @@ function App() {
       <Testimony/>
       <Songs/>
       <Contacts/>
+      <Footer/>
     </div>
     </>
   );
