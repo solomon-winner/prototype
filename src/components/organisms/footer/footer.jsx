@@ -17,7 +17,6 @@ import {
 
 const Footer = () => {
   return (
-    <Body>
       <FooterContainer>
         <FooterWave />
         <FooterContent>
@@ -57,7 +56,6 @@ const Footer = () => {
           </FooterSection>
         </FooterContent>
       </FooterContainer>
-    </Body>
   );
 }
 
