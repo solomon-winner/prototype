@@ -32,3 +32,29 @@ export const useTestimonies = () => {
 
   return { data, isLoading, isError };
 };
+
+export const useAddTestimony = () => {
+  const queryClient = useQueryClient();
+  const setTestimonies = useSetRecoilState(testimoniesState);
+
+  const mutation = useMutation({
+    mutationFn: addTestimony, // The API function to add a testimony
+    onSuccess: (newTestimony) => {
+      // Invalidate the 'testimonies' query to refetch the updated list
+      queryClient.invalidateQueries({ queryKey: ['testimonies'] });
+
+      // Update the Recoil state with the new testimony
+      setTestimonies((prevTestimonies) => [...prevTestimonies, newTestimony]);
+
+      // Show a success toast notification
+      toast.success('Testimony added successfully!');
+    },
+    onError: (error) => {
+      // Show an error toast notification
+      toast.error(`Failed to add testimony: ${error.message}`);
+      console.error('Error adding testimony:', error);
+    },
+  });
+
+  return mutation;
+};
