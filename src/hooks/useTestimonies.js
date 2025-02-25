@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { fetchTestimonies, removeTestimony, updateTestimonies } from '../utils/api.js';
+import { fetchTestimonies,addTestimony} from '../utils/api.js';
 import { useSetRecoilState } from 'recoil';
 import { testimoniesState } from '../state/state.js';
 import { useEffect } from 'react';
@@ -38,19 +38,15 @@ export const useAddTestimony = () => {
   const setTestimonies = useSetRecoilState(testimoniesState);
 
   const mutation = useMutation({
-    mutationFn: addTestimony, // The API function to add a testimony
+    mutationFn: addTestimony, 
     onSuccess: (newTestimony) => {
-      // Invalidate the 'testimonies' query to refetch the updated list
       queryClient.invalidateQueries({ queryKey: ['testimonies'] });
 
-      // Update the Recoil state with the new testimony
       setTestimonies((prevTestimonies) => [...prevTestimonies, newTestimony]);
 
-      // Show a success toast notification
       toast.success('Testimony added successfully!');
     },
     onError: (error) => {
-      // Show an error toast notification
       toast.error(`Failed to add testimony: ${error.message}`);
       console.error('Error adding testimony:', error);
     },
