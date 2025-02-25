@@ -1,5 +1,5 @@
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { fetchGeneralInfo, updateGeneralInfo } from '../utils/api.js';
+import { useQuery, } from '@tanstack/react-query';
+import { fetchGeneralInfo } from '../utils/api.js';
 import handleError from '../utils/errorHandler.js';
 import { useSetRecoilState } from 'recoil';
 import { companyInfoState } from '../state/state.js';
