@@ -4,7 +4,8 @@ import handleError from './errorHandler.js';
 export const fetchGeneralInfo = async () => {
   try {
     const response = await apiClient.get('/general');
-    return response.data;
+    console.log("response",response.data)
+    return response.data.data;
   } catch (error) {
     handleError(error);
     throw error;

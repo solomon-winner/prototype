@@ -4,9 +4,13 @@ import {BannerDiv} from "./banner";
 import Nav from "../../atoms/nav/navBar.jsx";
 import { useContext } from "react";
 import { scrollContext } from "../../../utils/scrollContext.js";
+import { useRecoilValue } from "recoil";
+import { generalInfoState } from "../../../state/state.js";
 
 const Banner = () => {
     const { scrollToSection, homeRef, aboutRef, testimonyRef, songsRef, contactsRef } = useContext(scrollContext);
+        const General = useRecoilValue(generalInfoState);
+        console.log("General",General)
     return (
         <BannerDiv ref={homeRef}>
       <Nav

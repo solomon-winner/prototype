@@ -1,6 +1,6 @@
 import { atom } from 'recoil';
 
-export const generalInfo = atom({
+export const generalInfoState = atom({
     key: 'general',
     default: []
 });

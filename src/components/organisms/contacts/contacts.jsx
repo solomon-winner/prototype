@@ -12,7 +12,7 @@ const Contacts = () => {
 
         const formData = new FormData(event.target); // Gather form data
         const testimonyData = {
-            name: formData.get('name'),
+            testifierName: formData.get('name'),
             email: formData.get('email'),
             testimony: formData.get('testimony'),
         };

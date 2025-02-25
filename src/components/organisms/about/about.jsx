@@ -1,9 +1,13 @@
 import { useContext } from "react";
 import { scrollContext } from "../../../utils/scrollContext";
 import { AboutDiv, AboutImage, AboutText } from "./about";
+import { useRecoilValue } from "recoil";
+import { generalInfoState } from "../../../state/state";
 
 const About = () => {
     const { aboutRef } = useContext(scrollContext);
+            const General = useRecoilValue(generalInfoState);
+            console.log("About",General)
     return (
         <AboutDiv ref={aboutRef}>
             <AboutImage></AboutImage>

@@ -2,16 +2,18 @@ import { useQuery, } from '@tanstack/react-query';
 import { fetchGeneralInfo } from '../utils/api.js';
 import handleError from '../utils/errorHandler.js';
 import { useSetRecoilState } from 'recoil';
-import { companyInfoState } from '../state/state.js';
+import { generalInfoState } from '../state/state.js';
 
 export const useGeneralInfo = () => {
-  const setCompanyInfo = useSetRecoilState(companyInfoState);
+  const setgeneralInfo = useSetRecoilState(generalInfoState);
 
-  return useQuery('generalInfo', fetchGeneralInfo, {
+  return useQuery({
+    queryKey: ['generalInfo'], // Query key as an array
+    queryFn: fetchGeneralInfo, // Query function
     onSuccess: (data) => {
-      setCompanyInfo(data);
+      setgeneralInfo(data); // Update Recoil state on success
     },
-    onError: handleError,
+    onError: handleError, // Handle errors
   });
 };
 

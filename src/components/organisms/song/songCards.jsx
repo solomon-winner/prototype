@@ -2,10 +2,16 @@ import { useContext } from "react";
 import { CardTitle, Image, PlaySong, SongButton, SongCard, SongCardLeft, SongCardRight, SongDiv, SongTitle, SongWrapper, Title, SeeMore, SingleSong, SongImage, SongDetails, SongName } from "./songCards";
 import { FaSpotify, FaApple, FaAmazon, FaYoutube } from "react-icons/fa";
 import { scrollContext } from "../../../utils/scrollContext";
+import { useRecoilValue } from "recoil";
+import { songsState } from "../../../state/state";
+import { useSongs } from "../../../hooks/useSongs";
 
 const Songs = () => {
     const { songsRef } = useContext(scrollContext);
-
+    const { isLoading: isSongLoading, isError: songError } = useSongs("song");
+const { isLoading: isAlbumLoading, isError: albumError } = useSongs("album");
+    const Songs = useRecoilValue(songsState);
+    console.log("Songs",Songs);
     return (
         <SongWrapper ref = {songsRef}>
             <CardTitle>Albums</CardTitle>
