@@ -1,15 +1,17 @@
+import { useRecoilValue } from "recoil";
 import { Explore, ExploreButton } from "./exploreCard";
+import { generalInfoState } from "../../../state/state";
 
 const ExploreCard = () => {
+            const General = useRecoilValue(generalInfoState);
+            console.log("General",General)
     return (
         <>
         <Explore>
-         <h3>Psalms 95: 1-6</h3>
+         <h3>{General.title}</h3>
 
          <p>
-            "... Sing joyful songs to the LORD! Praise the mighty rock where we are safe. 
-            Come to worship him with thankful hearts and songs of praise.
-            the LORD is the greatest God, king over all other gods..."
+            {General.bannerInfo}
          </p>
          <ExploreButton>Explore More</ExploreButton>
         </Explore>

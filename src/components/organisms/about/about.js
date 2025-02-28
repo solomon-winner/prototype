@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import CEO from "../../../assets/CEO_no_bg.png"
 
 export const AboutDiv = styled.div`
     margin-top: 10%;
@@ -27,7 +26,7 @@ export const AboutImage = styled.div`
     width: 40%;
     height: 500px;
     background-color: white;
-    background-image: url(${CEO});
+    background-image: url("${(props) => props.img}");
     background-size: cover;
     background-position: center;
 

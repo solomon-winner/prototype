@@ -2,7 +2,7 @@ import { atom } from 'recoil';
 
 export const generalInfoState = atom({
     key: 'general',
-    default: []
+    default: {}
 });
 
 export const cardInfoState = atom({

@@ -17,6 +17,7 @@ function App() {
 
   return (
     <>
+    
       <GlobalStyle />
       <ScrollProvider>
         <div className="App">

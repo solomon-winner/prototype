@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import CEO from "../../../assets/CEO_no_bg.png"
 
 export const Desc = styled.div`
     display: flex;
@@ -12,7 +11,7 @@ export const Desc = styled.div`
 export const Image = styled.div`
     width: 500px;
     height: 80vh;
-    background-image: url(${CEO});
+    background-image: url("${(props) => props.img}");
     background-size: cover;
     background-position: center;
     border-bottom: 15px solid #185601;
