@@ -9,7 +9,6 @@ import Footer from './components/organisms/footer/footer.jsx';
 import { ScrollProvider } from './utils/scrollContext.js';
 import { useTestimonies } from './hooks/useTestimonies.js';
 import { useGeneralInfo } from './hooks/useGeneralInfo.js';
-import { useSongs } from './hooks/useSongs.js';
 
 function App() {
   const { isLoading, error } = useTestimonies();

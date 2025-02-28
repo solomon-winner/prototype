@@ -3,16 +3,17 @@ import { scrollContext } from "../../../utils/scrollContext";
 import { AboutDiv, AboutImage, AboutText } from "./about";
 import { useRecoilValue } from "recoil";
 import { generalInfoState } from "../../../state/state";
-import {baseURL} from "../../../utils/constants";
+import { baseURL } from "../../../utils/constants";
 
 const About = () => {
     const { aboutRef } = useContext(scrollContext);
-            const General = useRecoilValue(generalInfoState);
+    const General = useRecoilValue(generalInfoState);
+    
     return (
         <AboutDiv ref={aboutRef}>
-            <AboutImage img={`${baseURL}public/${General.aboutPic}`}></AboutImage>
+            <AboutImage img={`${baseURL}public/${General.aboutPic}`} />
             <AboutText>
-                <h3>About </h3>
+                <h3>About</h3>
                 <p>{General.aboutInfo}</p>
             </AboutText>
         </AboutDiv>
