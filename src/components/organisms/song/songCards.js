@@ -61,7 +61,7 @@ export const Image = styled.div`
     width: 100%;
     height: 80%;
     background-color: white;
-    background-image: url(${props => props.img});
+    background-image: url("${(props) => props.img}");
     background-size: cover;
     background-position: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -155,7 +155,7 @@ export const SongImage = styled.div`
     width: 100%;
     height: 90%;
     background-color: white;
-    background-image: url(${props => props.img});
+    background-image: url("${(props) => props.img}");
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
