@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Guitar from '../../../assets/guitar.png';
 
 export const ContactDiv = styled.div`
     font-family: Arial, sans-serif;
@@ -27,7 +28,7 @@ export const Container = styled.div`
 
 export const PhotoSide = styled.div`
     flex: 1;
-    background-image: url('https://images.unsplash.com/photo-1518707399486-6d702a84ff00');
+    background-image: url('${Guitar}');
     background-size: cover;
     background-position: center;
     min-height: 500px;
