@@ -6,7 +6,7 @@ export const Desc = styled.div`
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    width: 100%;
+    width: 95%;
     min-height: 100vh;
     padding: 1rem;
     
