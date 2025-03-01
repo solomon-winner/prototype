@@ -5,7 +5,6 @@ import { testimoniesState } from '../state/state.js';
 import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 
-// Fetch Testimonies Hook
 export const useTestimonies = () => {
   const setTestimonies = useSetRecoilState(testimoniesState);
 

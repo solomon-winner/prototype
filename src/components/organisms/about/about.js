@@ -74,6 +74,7 @@ export const AboutImage = styled.div`
     @media (min-width: 768px) {
         width: 50%;
         height: 500px;
+        display:hidden;
     }
 
     @media (min-width: 1024px) {

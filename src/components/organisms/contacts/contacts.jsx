@@ -1,16 +1,18 @@
-import React, { useContext } from 'react';
-import { ContactDiv, Container, PhotoSide, FormSide, Title, Form, Label, Input, Textarea, Button, P } from './contacts';
-import { scrollContext } from '../../../utils/scrollContext';
-import { useAddTestimony } from '../../../hooks/useTestimonies.js'; // Import the useAddTestimony hook
+import { 
+    ContactWrapper, ContactTitle, ContactContent, ContactInfo, ContactForm, FormInput, FormTextarea, SubmitButton,
+    
+} from './contacts.js';
+import { useContext } from 'react';
+import { scrollContext } from '../../../utils/scrollContext.js';
+import { useAddTestimony } from '../../../hooks/useTestimonies.js';
 
 const Contacts = () => {
     const { contactsRef } = useContext(scrollContext);
-    const { mutate: addTestimonyMutation } = useAddTestimony(); // Get the mutation function
+    const { mutate: addTestimonyMutation } = useAddTestimony();
 
     const handleSubmit = async (event) => {
-        event.preventDefault(); // Prevent the default form submission
-
-        const formData = new FormData(event.target); // Gather form data
+        event.preventDefault();
+        const formData = new FormData(event.target);
         const testimonyData = {
             testifierName: formData.get('name'),
             email: formData.get('email'),
@@ -18,36 +20,29 @@ const Contacts = () => {
         };
 
         try {
-            await addTestimonyMutation(testimonyData); // Trigger the mutation
-            event.target.reset(); // Reset the form after successful submission
+            await addTestimonyMutation(testimonyData);
+            event.target.reset();
         } catch (error) {
             console.error('Error submitting testimony:', error);
         }
     };
 
     return (
-        <ContactDiv ref={contactsRef}>
-            <Container>
-                <PhotoSide role="img" aria-label="Inspirational image of a person writing in a journal near a window"></PhotoSide>
-                <FormSide>
-                    <Title>We’d love to hear from you!</Title>
-                    <P>Welcome to our gospel song community, where your voice matters. Whether you’ve been touched by the music, inspired by the message, or simply wish to share your story, this space is for you. We invite you to share your thoughts, testimonies, and experiences. Your words can uplift others and spread the love and hope found in gospel music. Let’s celebrate together the power of faith through song!</P>
-                    <Form id="testimonyForm" onSubmit={handleSubmit}>
-                        <Label htmlFor="name">Your Name:</Label>
-                        <Input type="text" id="name" name="name" required />
-                        
-                        <Label htmlFor="email">Your Email:</Label>
-                        <Input type="email" id="email" name="email" required />
-                        
-                        <Label htmlFor="testimony">Your Testimony:</Label>
-                        <Textarea id="testimony" name="testimony" required></Textarea>
-                        
-                        <Button type="submit">Submit Testimony</Button>
-                    </Form>
-                </FormSide>
-            </Container>
-        </ContactDiv>
+        <ContactWrapper ref={contactsRef}>
+            <ContactContent>
+               <ContactInfo> Share Your testimony or thoughts with us! We are eager to hear what God has done in your life through our ministry.</ContactInfo>
+                
+                <ContactForm onSubmit={handleSubmit}>
+                <ContactTitle>Get in Touch</ContactTitle>
+
+                    <FormInput type="text" placeholder="Name"id='name' name='name' required/>
+                    <FormInput type="email" placeholder="Email" id = 'email' name='email' required/>
+                    <FormTextarea placeholder="Message" rows="4"id= 'testimony' name = 'testimony'required/>
+                    <SubmitButton>Send Message</SubmitButton>
+                </ContactForm>
+            </ContactContent>
+        </ContactWrapper>
     );
-}
+};
 
 export default Contacts;

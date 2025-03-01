@@ -7,7 +7,6 @@ import { testimoniesState } from "../../../state/state.js";
 const Testimony = () => {
     const { testimonyRef } = useContext(scrollContext);
     const Testimonies = useRecoilValue(testimoniesState);
-    console.log("tesimonies",Testimonies)
     return (
         <TestimonyDiv ref={testimonyRef}>
             <Title>Testimonies</Title>
